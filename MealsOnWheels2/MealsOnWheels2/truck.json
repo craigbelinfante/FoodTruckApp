@@ -1,0 +1,26 @@
+[
+    {
+        "latitude" : 34.224655,
+        "longitude" : -118.536914,
+        "imageOfTruck" : "truck.jpg",
+        "name" : "Super Tacos",
+        "favorite" : true
+    },
+    {
+        "latitude" : 34.228807,
+        "longitude" : -118.470395,
+        "imageOfTruck" : "hotdog-truck.jpg",
+        "name" : "Hot Digitty Dogs",
+        "favorite" : true
+    },
+    {
+        "latitude" : 34.193690,
+        "longitude" : -118.447693,
+        "imageOfTruck" : "tacotruck2.jpg",
+        "name" : "Super Tacos2",
+        "favorite" : false
+    }
+]
+ 
+ 
+ 
