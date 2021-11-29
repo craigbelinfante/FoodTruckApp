@@ -27,13 +27,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordTextField.delegate = self
+        loginButton.backgroundColor = .none
+        loginButton.setImage(UIImage(named: "foodTruckrLogo-2"), for: .normal)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        loginButton.setTitle("Sign Up", for: .normal)
-        loginButton.backgroundColor = .blue
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        loginButton.backgroundColor = .none
+//        loginButton.setImage(UIImage(named: "foodTruckrLogo-2"), for: .normal)
+//    }
     
     @IBAction func showPasswordButtonTapped(_ sender: UIButton) {
         let toggled = passwordTextField.isSecureTextEntry
@@ -49,12 +51,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signInSegmentChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             loginType = .signUp
-            loginButton.setTitle("Sign Up", for: .normal)
-            loginButton.backgroundColor = .blue
-            loginButton.setImage(UIImage(named: ""), for: .normal)
+            loginButton.backgroundColor = .none
+            loginButton.setImage(UIImage(named: "foodTruckrLogo-2"), for: .normal)
         } else {
             loginType = .signIn
-            loginButton.setTitle("", for: .normal)
             loginButton.backgroundColor = .none
             loginButton.setImage(UIImage(named: "foodTruckrLogo-2"), for: .normal)
             
@@ -75,7 +75,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.present(alertController, animated: true) {
                 self.loginType = .signIn
                 self.signInSignUpSegmentedControl.selectedSegmentIndex = 1
-                self.loginButton.setTitle("", for: .normal)
                 self.loginButton.backgroundColor = .none
                 self.loginButton.setImage(UIImage(named: "foodTruckrLogo-2"), for: .normal)
                 //animation

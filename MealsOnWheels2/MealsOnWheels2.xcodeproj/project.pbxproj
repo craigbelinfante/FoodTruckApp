@@ -123,13 +123,11 @@
 		44ADD3E425BFC3DA005E634E /* MealsOnWheels2 */ = {
 			isa = PBXGroup;
 			children = (
-				44ADD3E525BFC3DA005E634E /* AppDelegate.swift */,
-				44ADD3E725BFC3DA005E634E /* SceneDelegate.swift */,
+				44D9E29B2754A44E00FB5C85 /* App */,
 				44ADD42125BFC549005E634E /* Core Data */,
 				44ADD44C25C0F904005E634E /* Controller */,
-				44ADD42025BFC535005E634E /* Storyboards */,
 				44ADD42225BFC55B005E634E /* View Controllers */,
-				44ADD41B25BFC490005E634E /* truck.json */,
+				44ADD42025BFC535005E634E /* Storyboards */,
 				44ADD3F125BFC3DF005E634E /* Assets.xcassets */,
 				44ADD3F625BFC3DF005E634E /* Info.plist */,
 			);
@@ -194,6 +192,16 @@
 				44DC4F6B25CCB64700682AA7 /* User.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		44D9E29B2754A44E00FB5C85 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				44ADD3E525BFC3DA005E634E /* AppDelegate.swift */,
+				44ADD3E725BFC3DA005E634E /* SceneDelegate.swift */,
+				44ADD41B25BFC490005E634E /* truck.json */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

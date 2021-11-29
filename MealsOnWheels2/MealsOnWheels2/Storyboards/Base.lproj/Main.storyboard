@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eN0-Rt-Bd8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eN0-Rt-Bd8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,7 +39,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTf-a3-2zB">
                                 <rect key="frame" x="16" y="215" width="382" height="34"/>
-                                <state key="normal" title="Sign Up">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -57,21 +58,20 @@
                         <viewLayoutGuide key="safeArea" id="mpo-P2-RXY"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
-                            <constraint firstItem="0Qn-Sr-WRs" firstAttribute="leading" secondItem="mpo-P2-RXY" secondAttribute="leading" constant="358" id="0PY-ed-9Hq"/>
-                            <constraint firstItem="0Qn-Sr-WRs" firstAttribute="top" secondItem="RAr-Yu-hKS" secondAttribute="bottom" constant="-26" id="Mth-6T-FRG"/>
+                            <constraint firstItem="0Qn-Sr-WRs" firstAttribute="top" secondItem="RAr-Yu-hKS" secondAttribute="bottom" constant="-26" id="AYd-qK-b7b"/>
                             <constraint firstItem="mpo-P2-RXY" firstAttribute="trailing" secondItem="RAr-Yu-hKS" secondAttribute="trailing" constant="16" id="P3j-gg-MNQ"/>
                             <constraint firstItem="mpo-P2-RXY" firstAttribute="trailing" secondItem="LTf-a3-2zB" secondAttribute="trailing" constant="16" id="Q1b-rI-x3J"/>
                             <constraint firstItem="fNE-0C-OZY" firstAttribute="leading" secondItem="mpo-P2-RXY" secondAttribute="leading" constant="16" id="QnH-Yl-Ppb"/>
                             <constraint firstItem="LTf-a3-2zB" firstAttribute="leading" secondItem="mpo-P2-RXY" secondAttribute="leading" constant="16" id="ZNx-Xh-jdM"/>
                             <constraint firstItem="hDm-gi-b79" firstAttribute="top" secondItem="mpo-P2-RXY" secondAttribute="top" constant="31" id="bpd-KH-Fon"/>
-                            <constraint firstItem="mpo-P2-RXY" firstAttribute="trailing" secondItem="0Qn-Sr-WRs" secondAttribute="trailing" constant="30" id="dOp-7F-rgO"/>
                             <constraint firstItem="RAr-Yu-hKS" firstAttribute="top" secondItem="fNE-0C-OZY" secondAttribute="bottom" constant="8" symbolic="YES" id="i0o-zk-amt"/>
-                            <constraint firstItem="0Qn-Sr-WRs" firstAttribute="leading" secondItem="RAr-Yu-hKS" secondAttribute="trailing" constant="-40" id="l6s-OP-evL"/>
                             <constraint firstItem="LTf-a3-2zB" firstAttribute="top" secondItem="RAr-Yu-hKS" secondAttribute="bottom" constant="49" id="mRe-my-TMi"/>
                             <constraint firstItem="mpo-P2-RXY" firstAttribute="trailing" secondItem="fNE-0C-OZY" secondAttribute="trailing" constant="16" id="nbc-PR-iyh"/>
                             <constraint firstItem="hDm-gi-b79" firstAttribute="centerX" secondItem="eBl-xG-eRY" secondAttribute="centerX" id="rCp-CQ-QG4"/>
                             <constraint firstItem="RAr-Yu-hKS" firstAttribute="leading" secondItem="mpo-P2-RXY" secondAttribute="leading" constant="16" id="tVa-up-w9J"/>
                             <constraint firstItem="fNE-0C-OZY" firstAttribute="top" secondItem="hDm-gi-b79" secondAttribute="bottom" constant="28" id="u8D-Yq-fFU"/>
+                            <constraint firstItem="0Qn-Sr-WRs" firstAttribute="width" secondItem="RAr-Yu-hKS" secondAttribute="width" multiplier="0.0680628" id="upg-8u-FDI"/>
+                            <constraint firstItem="0Qn-Sr-WRs" firstAttribute="leading" secondItem="RAr-Yu-hKS" secondAttribute="trailing" constant="-40" id="wNL-PE-vgX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="aDW-ON-hhR"/>
@@ -102,9 +102,7 @@
                                 <rect key="frame" x="283" y="748" width="113" height="90"/>
                                 <state key="normal" image="foodTruckrLogo-2"/>
                                 <connections>
-                                    <segue destination="Bwg-Z0-B9T" kind="popoverPresentation" identifier="ShowTrucks" popoverAnchorView="txb-RV-VD5" id="GLx-B1-OU8">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="Bwg-Z0-B9T" kind="show" identifier="ShowTrucks" id="GLx-B1-OU8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -134,11 +132,11 @@
             <objects>
                 <tableViewController id="Bwg-Z0-B9T" customClass="TruckTableViewController" customModule="MealsOnWheels2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mIL-Iz-xWw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Truck" textLabel="6uk-Qk-oCE" style="IBUITableViewCellStyleDefault" id="B1M-UG-uQ9" customClass="TruckTableViewCell" customModule="MealsOnWheels2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B1M-UG-uQ9" id="xja-AM-evT">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
