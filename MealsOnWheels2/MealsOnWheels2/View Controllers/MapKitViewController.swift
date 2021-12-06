@@ -73,7 +73,9 @@ class MapKitViewController: UIViewController {
         } else if segue.identifier == "LoginSegue" {
             if let loginVC = segue.destination as? LoginViewController {
                 loginVC.loginController = loginController
+                loginVC.isModalInPresentation = true
             }
+            
         }
     }
 
