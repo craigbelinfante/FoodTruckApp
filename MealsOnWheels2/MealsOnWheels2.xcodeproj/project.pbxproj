@@ -27,6 +27,7 @@
 		44DC4F6725CCB5EE00682AA7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DC4F6625CCB5EE00682AA7 /* LoginController.swift */; };
 		44DC4F6C25CCB64700682AA7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DC4F6B25CCB64700682AA7 /* User.swift */; };
 		44DC4F7E25D3737600682AA7 /* MapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DC4F7D25D3737600682AA7 /* MapDetailView.swift */; };
+		44DE70AB27641F1A008875BE /* UIViewControllerSimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DE70AA27641F1A008875BE /* UIViewControllerSimpleAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		44DC4F6625CCB5EE00682AA7 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		44DC4F6B25CCB64700682AA7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		44DC4F7D25D3737600682AA7 /* MapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailView.swift; sourceTree = "<group>"; };
+		44DE70AA27641F1A008875BE /* UIViewControllerSimpleAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerSimpleAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				44ADD42125BFC549005E634E /* Core Data */,
 				44ADD44C25C0F904005E634E /* Controller */,
 				44ADD42225BFC55B005E634E /* View Controllers */,
+				44DE70A927641EE3008875BE /* Helpers */,
 				44ADD42025BFC535005E634E /* Storyboards */,
 				44ADD3F125BFC3DF005E634E /* Assets.xcassets */,
 				44ADD3F625BFC3DF005E634E /* Info.plist */,
@@ -202,6 +205,14 @@
 				44ADD41B25BFC490005E634E /* truck.json */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		44DE70A927641EE3008875BE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				44DE70AA27641F1A008875BE /* UIViewControllerSimpleAlert.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				44DC4F6725CCB5EE00682AA7 /* LoginController.swift in Sources */,
 				44ADD44325C0A3F2005E634E /* TruckTableViewController.swift in Sources */,
 				44ADD44825C0ACE8005E634E /* TruckTableViewCell.swift in Sources */,
+				44DE70AB27641F1A008875BE /* UIViewControllerSimpleAlert.swift in Sources */,
 				44ADD3F025BFC3DA005E634E /* MealsOnWheels2.xcdatamodeld in Sources */,
 				44ADD43825BFCCE5005E634E /* MapKitViewController.swift in Sources */,
 				44ADD3E625BFC3DA005E634E /* AppDelegate.swift in Sources */,

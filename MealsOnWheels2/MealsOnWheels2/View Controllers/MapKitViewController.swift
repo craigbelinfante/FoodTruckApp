@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreData
 
-class MapKitViewController: UIViewController {
+class MapKitViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -26,14 +26,12 @@ class MapKitViewController: UIViewController {
             setMapData()
         }
     }
-        
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         if loginController.bearer == nil {
             performSegue(withIdentifier: "LoginSegue", sender: self)
         }
-        
         trucks = truckController.trucks
     }
     
@@ -45,13 +43,13 @@ class MapKitViewController: UIViewController {
     private func updateViews() {
         mapView.delegate = self
         locationManager.requestWhenInUseAuthorization()
-
+        
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: reuseIdentifier)
-
+        
         userTrackingButton = MKUserTrackingButton(mapView: mapView)
         userTrackingButton.translatesAutoresizingMaskIntoConstraints = false
         mapView.addSubview(userTrackingButton)
-
+        
         userTrackingButton.leftAnchor.constraint(equalTo: mapView.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
         userTrackingButton.bottomAnchor.constraint(equalTo: mapView.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
     }
@@ -64,7 +62,7 @@ class MapKitViewController: UIViewController {
     
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowTrucks" {
@@ -72,13 +70,25 @@ class MapKitViewController: UIViewController {
             vc.trucks = truckController.trucks
         } else if segue.identifier == "LoginSegue" {
             if let loginVC = segue.destination as? LoginViewController {
-                loginVC.loginController = loginController
                 loginVC.isModalInPresentation = true
+                loginVC.presentationController?.delegate = self
+                //loginVC.loginController = loginController
             }
-            
         }
     }
 
+    // MARK: - Modal
+    
+    func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
+        print("slide to dismiss stopped")
+        let alert = UIAlertController(title: "Please Sign-In", message: "", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in }))
+        if let topController = UIApplication.topViewController(base: self) {
+            topController.present(alert, animated: true, completion: nil)
+        } else {
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 }
 
 extension MapKitViewController: MKMapViewDelegate {
@@ -106,5 +116,4 @@ extension MapKitViewController: MKMapViewDelegate {
     
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
     }
-    
 }
