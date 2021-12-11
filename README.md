@@ -3,14 +3,14 @@ An application to find and order from local food trucks
 
 ## Features
 
-- Login with email and password 
+- Login with Apple email and password 
 - MapKit to view local trucks
 - Favorite button and tableVC to see favorite trucks
-- Sign In/Sign Up animation features use Core Animation
 
 ## Upcoming Features
 
-- Login page through Firebase
+- Login page through Apple
+- Reimplement animation features for login
 - Updated MapKit for better viewing
 - Saving user preferences and favorites
 - Add API for local food trucks in the area
